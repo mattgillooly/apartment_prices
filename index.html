@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head><script type='text/javascript'>window.mod_pagespeed_start = Number(new Date());</script><script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setSiteSpeedSampleRate',100]);_gaq.push(['_setCustomVar',1,'FuriousState','Experiment: 1']);</script>
+    <link rel="stylesheet" type="text/css" href="/main.css"/>
+<title>Providence Apartment Prices: Cost Per Bedroom</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+<style type="text/css">html{height:100%}body{height:100%;margin:0px;padding:0px}#map_canvas{height:100%}#legend{position:absolute;bottom:30px;left:20px;background:#fff;border-style:solid;border-width:1px;padding:4px}</style>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">var overlay;TQOverlay.prototype=new google.maps.OverlayView();
+
+  function initialize() {
+    var latlng=new google.maps.LatLng(41.8239891,-71.4128343);
+    var myOptions={zoom:13,center:latlng,mapTypeId:google.maps.MapTypeId.ROADMAP};
+    var map=new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+    var swBound=new google.maps.LatLng(41.7341893,-71.51634585);
+    var neBound=new google.maps.LatLng(41.9137889,-71.30932275);
+    var bounds=new google.maps.LatLngBounds(swBound,neBound);
+    var srcImage="http://www.mashablecity.com/apartment_prices/apts.png";
+    overlay=new TQOverlay(bounds,srcImage,map);
+  }
+
+  function TQOverlay(bounds,image,map){this.bounds_=bounds;this.image_=image;this.map_=map;this.div_=null;this.setMap(map);}
+TQOverlay.prototype.onAdd=function(){var div=document.createElement('DIV');div.style.border="none";div.style.borderWidth="0px";div.style.position="absolute";var img=document.createElement("img");img.src=this.image_;img.style.width="100%";img.style.height="100%";img.style.opacity=.5;img.style.filter='alpha(opacity=50)';div.appendChild(img);this.div_=div;var panes=this.getPanes();panes.overlayLayer.appendChild(div);}
+TQOverlay.prototype.draw=function(){var overlayProjection=this.getProjection();var sw=overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());var ne=overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());var div=this.div_;div.style.left=sw.x+'px';div.style.top=ne.y+'px';div.style.width=(ne.x-sw.x)+'px';div.style.height=(sw.y-ne.y)+'px';}
+TQOverlay.prototype.onRemove=function(){this.div_.parentNode.removeChild(this.div_);this.div_=null;}</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas" style="width:100%; height:100%"></div>
+  <div id="legend">
+  <b>$/bedroom</b>
+  <br><br>  
+  <font color="#FF0000">&#9608;</font> $1800+<br>
+  <font color="#FF2B00">&#9608;</font> $1700+<br>
+  <font color="#FF5600">&#9608;</font> $1600+<br>
+  <font color="#FF7F00">&#9608;</font> $1500+<br>
+  <font color="#FFAB00">&#9608;</font> $1400+<br>
+  <font color="#FFD500">&#9608;</font> $1300+<br>
+  <font color="#FFFF00">&#9608;</font> $1200+<br>
+  <font color="#7FFF00">&#9608;</font> $1100+<br>
+  <font color="#00FF00">&#9608;</font> $1000+<br>
+  <font color="#00FF7F">&#9608;</font> $900+<br>
+  <font color="#00FFFF">&#9608;</font> $800+<br>
+  <font color="#00D5FF">&#9608;</font> $700+<br>
+  <font color="#00ABFF">&#9608;</font> $600+<br>
+  <font color="#007FFF">&#9608;</font> $500+<br>
+  <font color="#0056FF">&#9608;</font> $400+<br>
+  <font color="#002BFF">&#9608;</font> $300+<br>
+  <font color="#0000FF">&#9608;</font> $300-<br>
+  <br>
+  as of 6/2011<br>
+  <a href="index.html">current</a><br>
+  <a href="rooms-2011-06.html">$/room</a><br>
+  (<a href="/news/2011-06-18.html">details</a>)
+  </div>
+<script type="text/javascript">if(window.parent==window){var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-27645543-1']);_gaq.push(['_setDomainName','www.jefftk.com']);_gaq.push(['_setAllowLinker',true]);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src='http://www.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();}</script><script type="text/javascript">(function(){var c=window,e="",f="&",j="&b_cdr=",k="&b_cihrl=",l="&b_cii=",n="&b_cilrl=",p="&b_ncdl=",q="&b_ncl=",r="&exptid=",s="&ft=",t="&hft=",u="&htmlAt=",v="&ifr=0",w="&ifr=1",x="&nrp=",y="&r",z="&url=",A="=",B="?",C="beforeunload",D="ets=",E="load",F="load:",G="on",H="unload:";c.pagespeed=c.pagespeed||{};var I=c.pagespeed,J=function(a,b,d,g,h,i){this.f=a;this.a=b;this.c=d;this.d=g;this.b=h;this.g=i;this.h=e};I.beaconUrl=I.h;
+J.prototype.e=function(){var a=this.f,b=c.mod_pagespeed_start,d=Number(new Date)-b,a=a+(-1==a.indexOf(B)?B:f),a=a+D+(this.a==E?F:H),a=a+d,a=a+(y+this.a+A);c.performance?(d=c.performance.timing,b=d.navigationStart,a+=d.loadEventStart-b):a+=d;this.a==C&&c.mod_pagespeed_loaded||(a+=c.parent!=c?w:v,this.a==E&&(c.mod_pagespeed_loaded=!0,(d=c.mod_pagespeed_num_resources_prefetched)&&(a+=x+d),(d=c.mod_pagespeed_prefetch_start)&&(a+=u+(b-d))),I.panelLoader&&(b=I.panelLoader.getCsiTimings().time,a+=j+b.CRITICAL_DATA_RECEIVED+
+l+b.CRITICAL_IMAGES_INLINED+n+b.CRITICAL_IMAGES_LOW_RES_LOADED+k+b.CRITICAL_IMAGES_HIGH_RES_LOADED+p+b.NON_CACHEABLE_DATA_LOADED+q+b.NON_CRITICAL_LOADED),this.c!=e&&(a+=t+this.c),this.d!=e&&(a+=s+this.d),this.b!=e&&(a+=r+this.b),a+=z+encodeURIComponent(this.g),I.beaconUrl=a,(new Image).src=a)};I.i=function(a,b,d,g,h,i){var m=new J(a,b,d,g,h,i);c.addEventListener?c.addEventListener(b,function(){m.e()},!1):c.attachEvent(G+b,function(){m.e()})};I.addInstrumentationInit=I.i;})();
+
+pagespeed.addInstrumentationInit('/ngx_pagespeed_beacon', 'load', '', '', '1', 'http://www.jefftk.com/apartment_prices/index-2011-06');</script></body> </html>
